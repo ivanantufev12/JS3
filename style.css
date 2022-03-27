@@ -1,0 +1,10 @@
+:root {
+    --important: #D84033;
+
+}
+
+
+.ferst-title {
+    text-align: center;
+    background-color: var(--important);
+}
