@@ -30,22 +30,17 @@
 11) Добавить папку с третьим уроком в свой репозиторий на GitHub
 */
 `use strict`
-let question = +prompt(`Ваш месячный доход?`)
-let money = question
-console.log(money)
+let money = +prompt(`Ваш месячный доход?`, 300000)
 console.log(typeof money)
 
-let income = `30000`
+/*let income = `30000`
 console.log(typeof income)
-console.log(income.length)
+console.log(income.length)*/
 
-let question2 = prompt(`Перечислите возможные расходы за рассчитываемый период через запятую`)
-let addExpenses = question2 //`500, 12000, 200000, И еще`
-    //сonsole.log(addExpenses.toLowerCase())
+let addExpenses = prompt(`Перечислите возможные расходы за рассчитываемый период через запятую`)
 console.log(addExpenses.split(`,`))
 
-let question3 = confirm(`Есть ли у вас депозит в банке`)
-let deposit = question3 //1000<5000
+let deposit = confirm(`Есть ли у вас депозит в банке?`)
 console.log(deposit)
 console.log(typeof deposit)
 
@@ -68,7 +63,7 @@ let question6 = prompt(`Какие обязательные ежемесячны
 let monthlyExpense2 = question6
 console.log(monthlyExpense2)
 
-let question7 = +prompt(`Какие обязательные ежемесячные расходы у вас есть?`)
+let question7 = +prompt(`Во сколько это обойдется?`)
 let amountOfExpenses2 = question7
 console.log(amountOfExpenses2)
 
@@ -79,7 +74,7 @@ console.log(budgetMonth)
 //7) Зная budgetMonth, посчитать за сколько месяцев будет достигнута цель mission, вывести в консоль, округляя в большую сторону
 //++    parseInt
 
-let mission = 100000
+let mission = 1000000
 console.log(mission)
 
 let period = (100000/budgetMonth)
@@ -102,7 +97,7 @@ console.log(parseInt(budgetDay))
 // 4.	Если отрицательное значение то вывести “Что то пошло не так”
 // 5.	учесть варианты 0, 300 и 800
 
-let n = parseInt(budgetDay)
+/* let n = budgetDay
 switch (n) {
     case (n > 800):
         console.log(`Высокий уровень дохода`)
@@ -113,6 +108,20 @@ switch (n) {
     case (300 > n > 0):
         console.log(`Низкий уровень дохода`)
         break
-    default:
-        console.log(`Что то пошло не так`)
+   }
+/*
+
+ */
+if (budgetDay === 800) {
+    console.log('Высокий уровень дохода')
+} else if (budgetDay === 300) {
+    console.log('Средний уровень дохода')
+} else if (budgetDay === 0) {
+    console.log('Низкий уровень дохода')
+} else if (budgetDay > 800) {
+    console.log('Очень высокий уровень дохода')
+} else if (budgetDay < 800 && budgetDay > 300) {
+    console.log('У вас средний уровень дохода')
+} else if (budgetDay < 0) {
+    console.log('Что то пошло не так')
 }
